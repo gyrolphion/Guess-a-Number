@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="game.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Benim Tuttuğum Sayiyi Tahmin Et!</h1>
+        <p class="between">(1-20)</p>
+        <button class="btn again">Tekrarla</button>
+        <div class="number">🙄?</div>
+    </header>
+
+    <main>
+        <section class="left">
+            <input type="number" class="guess">
+            <button class="btn check">Check</button>
+        </section>
+        <section>
+            <p class="msg">Oyun başlıyooorrr...👌</p>
+            <p class="score-label">💯Score: <span class="score">10</span></p>
+            <p class="top-score-label">🥇Top-Score: <span class="top-score" id="top-score">0</span></p>
+
+        </section>
+        
+        <canvas id="canvas">Havai fişek gösterisi</canvas>
+
+    </main>
+
+
+
+    <script  src="game.js"></script>
+    
+</body>
+
+</html>
