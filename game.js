@@ -13,7 +13,6 @@ document.querySelector(".check").addEventListener("click", () => {
     console.log((mesaj.textContent = "Lütfen Bir Sayı Giriniz:"));
   } else if (tahmin == rastgeleSayi) {
     mesaj.textContent = "Tebrikler Bildiniz...👏";
-    //kazandıktan sonra check butonu disable olsun
     document.querySelector(".check").disabled = true;
 
     document.querySelector("body").style.backgroundColor = "green";
@@ -38,14 +37,13 @@ document.querySelector(".check").addEventListener("click", () => {
       }
       return color;
     }
-    const fireworksCount = 100; // Patlatılacak havai fişek sayısı
+    const fireworksCount = 100;
     for (let i = 0; i < fireworksCount; i++) {
       const x = Math.random() * window.innerWidth;
       const y = Math.random() * window.innerHeight;
       createFirework(x, y);
     }
 
-    //topscore kontrolü
     if (skor > enYuksekSkor) {
       enYuksekSkor = skor;
       topScore.textContent = enYuksekSkor;
@@ -70,7 +68,6 @@ document.querySelector(".check").addEventListener("click", () => {
   }
 });
 
-//Again butonu işlevi basılınca yapılacak
 document.querySelector(".again").onclick = () => {
   document.querySelector("body").style.backgroundColor = "#2d3436";
   rastgeleSayi = Math.ceil(Math.random() * 20);
@@ -79,11 +76,9 @@ document.querySelector(".again").onclick = () => {
   document.querySelector(".number").textContent = "😊?";
   document.querySelector(".guess").value = "";
   mesaj.textContent = "Oyun Yeni Oyuncu İçin Başlıyor...";
-  //tekrarla butonuna bastıktan sonra check butonu aktif olsun 
   document.querySelector(".check").disabled=false;
 
 };
-//Enter a  basılınca check butonu nu tetikle
 document.addEventListener("keydown", function (e) {
   if (e.key == "Enter") {
     document.querySelector(".check").click();
